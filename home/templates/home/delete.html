@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'home' %}">&#8592; Back</a>
+    <!-- <h3>{{task}}</h3> -->
+</div>
+<p>Are you sure you want to delete "{{task.title}}"</p>
+
+    <div class="card-body">
+    <form action="" method="post"> {% csrf_token %}
+        {{form.as_p}}
+         
+        <input class="button" type="submit" value="Continure">
+        
+    </form>
+
+</div>
+</form>
+
+
+
+
+
+<!-- 
+<div class="header-bar">
+    <a href="{% url 'home' %}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form action="" method="post"> {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="submit">
+    </form>
+
+</div> -->
+
+{% endblock %}
